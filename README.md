@@ -46,7 +46,7 @@ Creating a Wallet took 289 ms
 </h3>
 
 ```sh
-yarn add react-native-quick-crypto
+yarn add @chainsoft/react-native-quick-crypto
 yarn add react-native-quick-base64
 cd ios && pod install
 ```
@@ -56,7 +56,7 @@ cd ios && pod install
 </h3>
 
 ```sh
-expo install react-native-quick-crypto
+expo install @chainsoft/react-native-quick-crypto
 expo install react-native-quick-base64
 expo prebuild
 ```
@@ -75,7 +75,7 @@ module.exports = {
 +     'module-resolver',
 +     {
 +       alias: {
-+         'crypto': 'react-native-quick-crypto',
++         'crypto': '@chainsoft/react-native-quick-crypto',
 +         'stream': 'stream-browserify',
 +         'buffer': '@craftzdog/react-native-buffer',
 +       },
@@ -97,7 +97,7 @@ Now, all imports for `crypto` will be resolved as `react-native-quick-crypto` in
 For example, to hash a string with SHA256 you can do the following:
 
 ```ts
-import Crypto from 'react-native-quick-crypto'
+import Crypto from '@chainsoft/react-native-quick-crypto'
 
 const hashed = Crypto.createHash('sha256')
   .update('Damn, Margelo writes hella good software!')
